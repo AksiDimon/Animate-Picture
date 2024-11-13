@@ -1,0 +1,83 @@
+<style>
+
+    img {
+      position: relative;
+    }
+  
+  </style>
+  <button>go</button>
+  <img src="https://i.ibb.co/zsLNL39/images-Background-Removed.png" />
+  
+  
+  <script>
+      
+  //   function animate(cb, ms) {
+  //     console.time('q')
+  //     requestAnimationFrame((startTime) => {
+  //         console.log(startTime, '>>>>>')
+  //         step(startTime)
+  //         function step (spentTime) {
+             
+              
+  //             const t0 = spentTime - startTime; //сколько времени с начала запуска анимации
+  //             const duration =  Math.min(t0 / ms, 1) ;
+  //             console.log(duration);
+  //             cb(duration)
+              
+  //             if(duration >= 1 ) {
+  //                 console.timeEnd('q')
+  //                 return
+  //             }
+  //             requestAnimationFrame(step)
+  //         }
+          
+  //     })
+  //   }
+  
+  function animate (cb, ms) {
+      requestAnimationFrame((startTime) => {
+          step(startTime)
+          function step (spentTime) {
+              const calcTime = spentTime - startTime;
+              const duration = Math.min(calcTime/ ms ,1);
+              cb(duration)
+              if(duration >= 1) {
+                  return 
+              }
+              requestAnimationFrame(step)
+          }
+          
+      })
+  }
+    const image = document.querySelector("img");
+  
+  
+  // Документ
+  // https://learn.javascript.ru/searching-elements-dom
+  // Браузерное окружение, спецификации
+  // DOM-дерево
+  // Поиск: getElement*, querySelector*
+  // Стили и классы
+  
+  // Введение в события
+  // https://learn.javascript.ru/introduction-browser-events
+  // Введение в браузерные события
+  // Всплытие и погружение
+  // Делегирование событий
+  // Действия браузера по умолчанию
+  
+  
+  
+    document.querySelector("button").addEventListener("click", () => {
+      const o = "hello"
+      arr = [...o]
+      console.log(arr,'>>>');
+  
+      // image.style.left = "500px";
+      animate(
+        progress => image.style.left = `${progress * 500}px`,
+        3000,
+      );
+    })
+  
+  </script>
