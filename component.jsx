@@ -1,3 +1,3 @@
-function Component () {
+function Component (...args) {
     return <> Learn merge</>
 }
