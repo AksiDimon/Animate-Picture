@@ -1,8 +1,11 @@
 
 
-function Component (...args) {
-    return [1,2,3,4].map(val => val * 2)
-    // return <> Learn merge</>
+export function Component (...args) {
+
+    setTimeout(() => {
+    }, 3000)
+    return <> Learn merge {[1,2,3,4].map(val => val * 2)}</>
+ 
 }
 
 function determine () {
