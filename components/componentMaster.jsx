@@ -1,0 +1,3 @@
+function Master () {
+    return 'origin'
+}
