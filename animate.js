@@ -1,3 +1,3 @@
 function animate () {
-    return 'time'
+    return 'time' + 'time';
 }
