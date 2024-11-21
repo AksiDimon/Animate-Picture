@@ -3,6 +3,6 @@
 const pogination = 'qwerty' 
 
 function perfect () {
-    return 'repfect'
+    return 'REPFECT'
 }
 

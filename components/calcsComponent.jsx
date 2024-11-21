@@ -3,3 +3,8 @@ function CalcLength () {
 }
 
 Promise.resolve('1').then(console.log)
+
+
+function foo() {
+    return "hello";
+}
